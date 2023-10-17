@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.header-wrapper {
+  margin-bottom: 1em;
+  background-color: rgb(50, 50, 107);
+  padding: 1em;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-wrapper h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hamburger-menu-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.exit-icon {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.mobile-menu {
+  background-color: rgb(68, 68, 170);
+  height: 100vh;
+  width: 66%;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  animation: showMobileMenu 600ms forwards;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  margin-top: 5em;
+  text-align: right;
+}
+
+.mobile-menu-list-item {
+  padding: 0.5em 1em;
+  font-size: 24px;
+  color: #fff;
+}
+
+.mobile-menu-list-item a {
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgb(214, 210, 210);
+  padding: 1em;
+  position: relative;
+  background-color: rgb(196, 215, 245);
+  margin: 1em;
+}
+
+.avatar {
+  height: 50px;
+  margin-right: 1em;
+}
+
+.email {
+  font-style: italic;
+}
+
+.card-delete {
+  color: rgb(117, 11, 11);
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.hide-form {
+  transform: rotate(90deg);
+}
+
+.show-form {
+  transform: rotate(270deg);
+}
+
+.form-fields-wrapper {
+  padding: 1em;
+  animation: showForm 1s;
+  display: grid;
+  justify-content: center;
+}
+
+.form-fields-wrapper label {
+  display: block;
+  margin: 5px 0;
+}
+
+.form-fields-wrapper input {
+  padding: 5px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid rgb(161, 161, 161);
+  background-color: aliceblue;
+}
+
+input[type="submit"] {
+  padding: 0.5em 1.2em;
+  background-color: rgb(50, 50, 107);
+  color: #fff;
+  display: block;
+  margin-top: 1em;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  background-color: rgb(75, 75, 143);
+}
+
+.error-msg {
+  font-size: 12px;
+  color: rgb(133, 135, 136);
+  font-style: italic;
+  margin-top: 0.6em;
+}
+
+.no-contacts-msg {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  margin: 1em;
+}
+
+.add-contact {
+  font-size: 14px;
+  margin-left: 1em;
+  cursor: pointer;
+  margin-top: 0;
+  animation: showForm 1s;
+}
+
+.underline {
+  color: rgb(50, 50, 107);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@keyframes showForm {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes showMobileMenu {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
